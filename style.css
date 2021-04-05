@@ -1,0 +1,115 @@
+/*--------------------------------------------------------
+# Global
+--------------------------------------------------------*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  color: rgb(73, 73, 73);
+}
+
+/*--------------------------------------------------------
+# text
+--------------------------------------------------------*/
+
+#h4 {
+  margin: 4vh auto auto 2vh;
+}
+
+h1 {
+  font-size: 56px; /* when i try to target via #h1 the font size changes? */
+}
+
+#h1 {
+  width: 500px;
+}
+
+#p {
+  width: 300px;
+  text-align: left;
+  font-size: 22px;
+  line-height: 30px;
+}
+
+/*--------------------------------------------------------
+# content
+--------------------------------------------------------*/
+
+img {
+  max-width: 500px;
+}
+
+.mastercontainer {
+  /*NOTE THIS*/
+  max-width: 1050px; /*important as allows for shrinkage. 'width' would lock it at that value */
+  margin: 0 auto;
+}
+
+.parentcontainer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+
+.imagecontainer {
+  display: flex;
+  height: 100%;
+}
+
+.sectioncontainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+label {
+  background-color: rgb(73, 73, 73);
+  color: white;
+  padding: 25px;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+label:hover {
+  animation-name: grow;
+  animation-duration: 0.2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes grow {
+  100% {
+    background-color: rgb(43, 37, 78);
+  }
+}
+
+/*--------------------------------------------------------
+# footer
+--------------------------------------------------------*/
+.footer {
+  text-align: center;
+  margin-top: 150px;
+}
+
+.footer a {
+  color: rgb(53, 166, 170);
+  font-weight: bold;
+  text-decoration: none; /* removes underlines from link*/
+}
+
+/*--------------------------------------------------------
+# Media
+--------------------------------------------------------*/
+@media (max-width: 1000px) {
+  .parentcontainer {
+    flex-direction: column;
+    align-items: center;
+  }
+  .sectioncontainer {
+    margin-top: 50px;
+    height: 400px;
+  }
+  img {
+    max-width: 400px;
+  }
+}
